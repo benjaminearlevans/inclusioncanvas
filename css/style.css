@@ -1,37 +1,86 @@
 @import url('fonts.css');
 
-body{font-family: 'ProximaNova'; font-size: 16px; color: #000;}
+body{font-family: 'ProximaNova'; font-size: 16px; color: #000; padding-top: 65px;}
 h1,h2,h3,h4,h5,h6{font-family: 'ProximaNova'; font-weight: bold;}
 a{color: #09b8d5;}
 a:hover{text-decoration: none;}
+img{max-width: 100%;}
+img.media-object{max-width: none;}
 #topnavbar{margin: 0; background: #fff;}
 #topnavbar .navbar-nav{float: none; width: 100%; text-align: center;}
 #topnavbar .navbar-nav li{float: none; display: inline-block;}
 #topnavbar .navbar-nav li a{font-family: 'HelveticaNeue'; font-size: 14px; color: #3f3f3f; padding: 22px 75px;}
+#topnavbar .navbar-nav li.active a{background: #fff; color: #09b8d5;}
+.navbar-default .navbar-toggle .icon-bar{background: #09b8d5;}
 
 .big-hero{min-height: 100vh; background: #000; color: #fff; display: flex; flex-direction: column; justify-content: center;}
 .big-hero .container{height: 100%;}
 .big-hero h1{font-family: 'AlternateGothicNo2BT'; font-size: 130px; line-height: 0.9; margin: 0;}
 
+.title{font-size: 46px;}
 .big-title{font-size: 64px; font-weight: bold; position: relative;}
 .big-title.quote:after{content: " "; width: 68px; height: 60px; position: absolute; top: -12px; left: -35px; background: url(../img/quotes.svg) left top no-repeat transparent; z-index: -1;}
 
 .w750 .container{max-width: 750px;}
-.container.w860{max-width: 860px;}
+.w860 .container, .container.w860{max-width: 860px;}
 .content{padding-top: 68px; padding-bottom: 68px;}
 .content p{margin-bottom: 28px; line-height: 1.65;}
+.content ul{padding-left: 18px;}
 .content .blue-title{margin: 0 0 15px; color: #09b8d5; font-size: 26px;}
 .content .embed-responsive{margin-top: 50px;}
 .feature-update{margin-top: 65px;}
 .content-black{background: #1b1a1f; color: #fff;}
 .cta-block{text-align: center; padding: 260px 15px; background: url(../img/cta-bg.jpg) center center no-repeat #d8d8d8; background-size: cover;}
+.lr-block{margin-top: 40px;}
+.steps .lr-block{margin-top: 60px;}
+.steps .lr-block:last-child{margin-bottom: 78px;}
+.steps h3{margin: 12px 0 16px;}
+.download-block{display:block; font-size: 24px; font-weight: bold; padding: 45px 15px; background-color: #09b8d5; color: #fff; text-align: center;}
+.grey-block{background: #efefef;}
 
 .btn-cta{font-family: 'ProximaNova'; font-size: 24px; font-weight: bold; line-height: 1.25; border-radius: 3px; color: #09b8d5; padding: 45px 76px; border:0;}
 
 .changes-block{text-align: center; margin-top: 66px;}
 .changes-block h3.blue-title{margin: 36px 0 15px;}
 
+.change-list{padding-top: 74px;}
+.change-list .media{margin-bottom: 60px;}
+.change-list .media-left{padding-right: 45px;}
+.change-list .media-heading{font-size: 26px; font-weight: bold; margin-bottom: 16px;}
+.change-list p{margin-bottom: 0;}
+
 .footer{background: #000; color: #fff; position: relative; padding: 85px 20px 18px;}
 .footer-widget-links{max-width: 264px; margin: 0 auto 50px;}
 .footer-widget-links a{display: block; color: #fff; margin-bottom: 18px;}
 .footer-floating{position: absolute; bottom: 0; right: 0;}
+
+@media screen and (max-width: 768px){
+	body{padding-top: 48px;}
+	#topnavbar .navbar-header{text-align: center;}
+	#topnavbar .navbar-toggle{float: none; border: 0;}
+	#topnavbar .navbar-toggle:hover, #topnavbar .navbar-toggle:focus{background: #fff;}
+	#topnavbar .navbar-nav li{display: block;}
+	.title{font-size: 28px;}
+	.big-title{font-size: 32px;}
+	.content{padding-top: 25px; padding-bottom: 25px;}
+	.feature-update{margin-top: 25px;}
+	
+	.cta-block{padding: 100px 15px;}
+	.btn-cta{padding: 15px; font-size: 16px;}
+	.changes-block{margin-top: 25px;}
+	.footer{padding-top: 50px;}
+}
+
+@media screen and (max-width: 560px){
+	.big-hero h1{font-size: 80px;}
+	.big-hero{min-height: 60vh;}
+
+	.download-block{font-size: 18px;}
+	
+	.steps .lr-block{margin-top: 25px;}
+	.steps .lr-block:last-child{margin-bottom: 25px}
+
+	.change-list .media-left{display: block; padding-right: 0; text-align: center; margin-bottom: 15px;}
+	.change-list .media-object{display: inline-block;}
+	.change-list .media-body{display: block; text-align: center; width: 100%;}
+}
